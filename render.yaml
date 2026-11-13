@@ -1,0 +1,21 @@
+# Triển khai đầy đủ (có tài khoản, lớp học, nộp bài, bảng chung) lên Render.com
+# Lưu ý: cần gói trả phí có ổ đĩa (disk) để dữ liệu không bị mất khi triển khai lại.
+services:
+  - type: web
+    name: soan-de-thi
+    runtime: node
+    plan: starter
+    buildCommand: "echo ok"
+    startCommand: "node server.js"
+    healthCheckPath: /
+    envVars:
+      - key: DATA_DIR
+        value: /data
+      - key: COOKIE_SECURE
+        value: "1"
+      - key: NODE_VERSION
+        value: "20"
+    disk:
+      name: data
+      mountPath: /data
+      sizeGB: 1

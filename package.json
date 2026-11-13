@@ -1,0 +1,12 @@
+{
+  "name": "soan-de-thi-toan",
+  "version": "1.0.1",
+  "description": "Ứng dụng soạn đề thi Toán, ngân hàng câu hỏi, lớp học và kiểm tra tự chấm (chạy trên website riêng)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "node -e \"const f=require('fs');if(!f.existsSync('public/index.html')){console.error('Thiếu public/index.html');process.exit(1)}console.log('Bản tĩnh sẵn sàng: thư mục public')\""
+  },
+  "engines": { "node": ">=18" },
+  "license": "MIT"
+}
